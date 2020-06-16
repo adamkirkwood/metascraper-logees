@@ -6,9 +6,8 @@
 **/
 module.exports = () => {
   const rules = {
-    availability: [
-      ({ htmlDom: $, url }) => $('div.availability').text()
-    ]
+    availability: ({ htmlDom: $, url }) => $('p.availability').text(),
+    quantity: ({ htmlDom: $, url }) => $('div.availability-only').text()
   }
   return rules
 }

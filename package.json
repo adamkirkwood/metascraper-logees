@@ -1,6 +1,6 @@
 {
   "name": "metascraper-logees",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Scrape data from Logees.com",
   "main": "index.js",
   "scripts": {
