@@ -6,10 +6,7 @@
 **/
 module.exports = () => {
   const rules = {
-    logees: [
-      // They receive as parameter:
-      // - `htmlDom`: the cheerio HTML instance.
-      // - `url`: The input URL used for extact the content.
+    availability: [
       ({ htmlDom: $, url }) => $('div.availability').text()
     ]
   }
