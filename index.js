@@ -8,8 +8,8 @@ const regex = /unavailable/g;
 **/
 module.exports = () => {
   const rules = {
-    availability: ({ htmlDom: $, url }) => ($('p.availability').text().match(regex) === null),
-    quantity: ({ htmlDom: $, url }) => parseInt($('div.availability-only').text())
+    availability: ({ htmlDom: $, url }) => (($('p.availability').text().match(regex) === null) || false),
+    quantity: ({ htmlDom: $, url }) => (parseInt($('div.availability-only').text()) || 0)
   }
   return rules
 }
