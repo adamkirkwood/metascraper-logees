@@ -1,14 +1,13 @@
 'use strict'
 
-const {
-  memoizeOne
-} = require('@metascraper/helpers')
+const { memoizeOne } = require('@metascraper/helpers')
+const { parse } = require('tldts')
 
 const regex = /unavailable/g;
 
-const REGEX_LOGEES_URL = /(https?:\/\/(.+?\.)?logees\.com(\/[A-Za-z0-9\-\._~:\/\?#\[\]@!$&'\(\)\*\+,;\=]*)?)/
-
-const isValidUrl = memoizeOne(({ url }) => REGEX_LOGEES_URL.test(url))
+const isValidUrl = memoizeOne(
+  ({ url }) => getDomainWithoutSuffix(url) === 'logees'
+)
 
 /**
  * A set of rules we want to declare under `metascraper-logees` namespace.
