@@ -1,7 +1,7 @@
 'use strict'
 
 const { memoizeOne } = require('@metascraper/helpers')
-const { parse } = require('tldts')
+const { getDomainWithoutSuffix } = require('tldts')
 
 const regex = /unavailable/g;
 
