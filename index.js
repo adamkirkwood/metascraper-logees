@@ -1,5 +1,9 @@
 'use strict'
 
+const {
+  memoizeOne
+} = require('@metascraper/helpers')
+
 const regex = /unavailable/g;
 
 const REGEX_LOGEES_URL = /(https?:\/\/(.+?\.)?logees\.com(\/[A-Za-z0-9\-\._~:\/\?#\[\]@!$&'\(\)\*\+,;\=]*)?)/
